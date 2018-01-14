@@ -39,6 +39,10 @@ ceph_keystone:
   admin_user: "{{ KEY_API.vars.keystone_admin_user }}"
   admin_password: "{{ KEY_API.vars.keystone_admin_pwd | quote }}"
   admin_project: "{{ KEY_API.vars.keystone_admin_tenant }}"
+  admin_project_domain: "Default"
+  admin_user_domain: "Default"
+
+system_cacert_file: "/etc/ssl/certs/ca-certificates.crt"
 
 ceph_monasca:
   alarm_definition_api_url:

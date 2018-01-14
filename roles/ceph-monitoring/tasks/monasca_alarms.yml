@@ -26,6 +26,9 @@
     keystone_user: "{{ ceph_keystone.admin_user }}"
     keystone_password: "{{ ceph_keystone.admin_password | quote }}"
     keystone_project: "{{ ceph_keystone.admin_project }}"
+    keystone_project_domain: "{{ ceph_keystone.admin_project_domain }}" 
+    keystone_user_domain: "{{ ceph_keystone.admin_user_domain }}"
+    keystone_verify: "{{ system_cacert_file }}"
     monasca_api_url: "{{ ceph_monasca.alarm_definition_api_url }}"
     overwrite: false
   register: default_notification_result
@@ -44,6 +47,9 @@
     keystone_url: "{{ ceph_keystone.admin_url }}"
     keystone_user: "{{ ceph_keystone.admin_user }}"
     keystone_password: "{{ ceph_keystone.admin_password | quote }}"
+    keystone_project_domain: "{{ ceph_keystone.admin_project_domain }}" 
+    keystone_user_domain: "{{ ceph_keystone.admin_user_domain }}"
+    keystone_verify: "{{ system_cacert_file }}"
     keystone_project: "{{ ceph_keystone.admin_project }}"
     monasca_api_url: "{{ ceph_monasca.alarm_definition_api_url }}"
     ok_actions:
@@ -84,6 +90,9 @@
     keystone_user: "{{ ceph_keystone.admin_user }}"
     keystone_password: "{{ ceph_keystone.admin_password | quote }}"
     keystone_project: "{{ ceph_keystone.admin_project }}"
+    keystone_project_domain: "{{ ceph_keystone.admin_project_domain }}" 
+    keystone_user_domain: "{{ ceph_keystone.admin_user_domain }}"
+    keystone_verify: "{{ system_cacert_file }}"
     monasca_api_url: "{{ ceph_monasca.alarm_definition_api_url }}"
     ok_actions:
       - "{{ default_notification_result.notification_method_id }}"
@@ -186,6 +195,9 @@
     keystone_user: "{{ ceph_keystone.admin_user }}"
     keystone_password: "{{ ceph_keystone.admin_password | quote }}"
     keystone_project: "{{ ceph_keystone.admin_project }}"
+    keystone_project_domain: "{{ ceph_keystone.admin_project_domain }}" 
+    keystone_user_domain: "{{ ceph_keystone.admin_user_domain }}"
+    keystone_verify: "{{ system_cacert_file }}"
     monasca_api_url: "{{ ceph_monasca.alarm_definition_api_url }}"
     ok_actions:
       - "{{ default_notification_result.notification_method_id }}"
